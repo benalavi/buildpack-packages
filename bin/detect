@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -f $1/.packages ]; then
+  echo "Packages"
+  exit 0
+else
+  echo "no .packages file"
+  exit 1
+fi
