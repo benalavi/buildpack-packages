@@ -19,7 +19,7 @@ for package in $(cat $BUILD_DIR/.packages); do
   path="$path:$APP_DIR/vendor/$name/bin"
   
   echo "       $name"  
-  curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 $package -s -o - | tar zxf -
+  curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 $package -s -L -o - | tar zxf -
 done
 
 echo "-----> Setting PATH"
